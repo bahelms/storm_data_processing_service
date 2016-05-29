@@ -29,4 +29,13 @@
       <scope>provided</scope>
     </dependency>
   </dependencies>
+
+  <build>
+    <sourceDirectory>src/main/java</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>src/main/java/org/tks/dps</directory>
+      </resource>
+    </resources>
+  </build>
 </project>

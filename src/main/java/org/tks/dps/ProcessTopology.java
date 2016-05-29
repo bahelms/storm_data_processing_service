@@ -6,6 +6,7 @@ import org.apache.storm.LocalCluster;
 import org.apache.storm.utils.Utils;
 import org.tks.dps.CSVSpout;
 import org.tks.dps.DataStoreBolt;
+import org.tks.dps.RubyBolt;
 
 class ProcessTopology {
   public static void main(String[] args) throws Exception {
@@ -16,6 +17,7 @@ class ProcessTopology {
       .setBolt("data_store_bolt", new DataStoreBolt(), 2)
       .shuffleGrouping("csv_spout");
 
+      // .setBolt("ruby_bolt", new RubyBolt(), 2)
     Config config = new Config();
     config.setDebug(true);
 
